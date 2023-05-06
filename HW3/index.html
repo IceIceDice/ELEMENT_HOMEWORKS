@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистраци</title>
+    <style>
+        body {
+            padding: 24px;
+            display: grid;
+            place-content: center;
+        }
+        
+        label {
+            display: block;
+            padding-top: 16px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Форма Регистраци</h1>
+    <p style="font-weight: 600;">Пожалуйста, заполните все поля:</p>
+    
+    <form action="login.html">
+
+        <fieldset>
+            <legend>Личные данные</legend>
+
+            <label for="username">Имя</label>
+            <input type="text" id="username" placeholder="Иван" required>
+
+            <label for="surname">Фамилия</label>
+            <input type="text" id="surname" placeholder="Иванов">
+            
+            <label for="age">Дата Рождения</label>
+            <input type="date" id="age" style="width: 25%;">
+            
+            <div class="grid-container">
+                <div><label for="male">Мужской</label>
+                <input type="radio" id="male" name="gender"></div>
+
+                <div><label for="female">Женский</label>
+                <input type="radio" id="female" name="gender"></div>
+            </div>
+
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" placeholder="+7 777 123 4567" required>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Данные для сайта</legend>
+
+            <label for="email">Почта</label>
+            <input type="email" id="email" placeholder="Только G-mail" required>
+
+            <label for="password">Пароль</label>
+            <input type="password" id="password" placeholder="Не более 8-ми символов!" required>
+
+        </fieldset> 
+        
+        <fieldset>
+            <legend>Соглашения</legend>
+
+            <label for="term-1">Я прочитал правила пользования сервисом:</label>
+            <input type="checkbox" id="term" required>
+
+            <label for="term-2">Я согласен на использование моих личных данных третьими лицами:</label>
+            <input type="checkbox" id="term" required>
+
+        </fieldset> 
+        
+        <div class="grid-container">
+            <button type="reset" class="button-register">Очистить</button>
+            <button type="submit" class="button-register">Зарегистрироваться</button>
+        </div>
+
+    </form>
+</body>
+</html>
